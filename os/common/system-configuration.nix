@@ -18,5 +18,10 @@
     swww
     rofi-wayland
   ];
+
+  # System Fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
 }
 
