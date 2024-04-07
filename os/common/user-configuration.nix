@@ -1,13 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  users.users.nixuser = {
+  users.users.matt = {
     isNormalUser = true;
-    description = "nixuser";
+    description = "matt";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
       neovim
+      unstable.obsidian
     ];
   };
 }
