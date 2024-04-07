@@ -17,6 +17,7 @@
     libnotify
     swww
     rofi-wayland
+    hyprpaper
   ];
 
   # System Fonts
