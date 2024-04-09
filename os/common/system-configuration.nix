@@ -9,6 +9,8 @@
     tmux
     git
     wget
+    gcc
+    gnumake
     curl
     ripgrep
     # for hyprland
