@@ -22,7 +22,28 @@
 
   wsl.enable = true;
   wsl.defaultUser = "nixuser";
-  
+ 
+  services.xserver.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
+
+  services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "startplasma-x11";
+  services.xrdp.openFirewall = true;
+ 
+  services.xrdp.port = 3390;
+
+  # Configure keymap in X11
+  services.xserver = {
+    layout = "gb";
+    xkbVariant = "";
+  };
+
+  # Configure console keymap
+  console.keyMap = "uk";
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
