@@ -20,6 +20,7 @@
     swww
     rofi-wayland
     hyprpaper
+    brightnessctl
   ];
 
   # System Fonts
