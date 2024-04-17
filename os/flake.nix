@@ -26,6 +26,14 @@
         ./hosts/nixos/configuration.nix 
       ];
     };
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+      specialArgs = inputs;
+      modules = [ 
+        ./hosts/desktop/hardware-configuration.nix
+        ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+        ./hosts/desktop/configuration.nix 
+      ];
+    };
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
       specialArgs = inputs;
       modules = [

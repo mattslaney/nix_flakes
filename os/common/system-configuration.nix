@@ -13,6 +13,7 @@
     gnumake
     curl
     ripgrep
+    sysstat
     # for hyprland
     waybar
     mako
