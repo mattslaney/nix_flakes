@@ -11,6 +11,10 @@
     wget
     gcc
     gnumake
+    unstable.cargo
+    unstable.rustc
+    unstable.rustfmt
+    unstable.rust-analyzer
     curl
     ripgrep
     sysstat
