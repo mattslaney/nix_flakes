@@ -11,9 +11,20 @@
     wget
     gcc
     gnumake
+    cmake
+    clang-tools
+    unstable.cargo
+    unstable.rustc
+    unstable.rust-analyzer
+    unstable.rustfmt
+    python3
+    nodejs_20
+    nodePackages.typescript
+    nodePackages.typescript-language-server
     curl
     ripgrep
     sysstat
+    unzip
     # for hyprland
     waybar
     mako

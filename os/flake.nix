@@ -26,6 +26,14 @@
         ./hosts/nixos/configuration.nix 
       ];
     };
+    nixosConfigurations.kitchensink = nixpkgs.lib.nixosSystem {
+      specialArgs = inputs;
+      modules = [ 
+        ./hosts/nixos/hardware-configuration.nix
+        ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+        ./hosts/nixos/configuration.nix 
+      ];
+    };
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = inputs;
       modules = [ 
